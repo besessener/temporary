@@ -31,7 +31,7 @@
           </elementProp>
           <elementProp name="threads" elementType="Argument">
             <stringProp name="Argument.name">threads</stringProp>
-            <stringProp name="Argument.value">100</stringProp>
+            <stringProp name="Argument.value">50</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">User</stringProp>
           </elementProp>
@@ -100,6 +100,7 @@
           </collectionProp>
         </elementProp>
         <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
+        <stringProp name="QUEUE_SIZE">10000</stringProp>
       </BackendListener>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
@@ -190,7 +191,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="counter" enabled="true">
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="counter">
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end">500</stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
@@ -199,7 +200,7 @@
           <boolProp name="CounterConfig.per_user">false</boolProp>
         </CounterConfig>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="index" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="index">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
