@@ -37,7 +37,7 @@
           </elementProp>
           <elementProp name="rate" elementType="Argument">
             <stringProp name="Argument.name">rate</stringProp>
-            <stringProp name="Argument.value">50000</stringProp>
+            <stringProp name="Argument.value">40000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">pro Lastagent</stringProp>
           </elementProp>
