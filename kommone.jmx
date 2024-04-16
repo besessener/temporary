@@ -25,7 +25,7 @@
           </elementProp>
           <elementProp name="duration" elementType="Argument">
             <stringProp name="Argument.name">duration</stringProp>
-            <stringProp name="Argument.value">105</stringProp>
+            <stringProp name="Argument.value">1200</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">Sekunden</stringProp>
           </elementProp>
@@ -37,14 +37,14 @@
           </elementProp>
           <elementProp name="rate" elementType="Argument">
             <stringProp name="Argument.name">rate</stringProp>
-            <stringProp name="Argument.value">150</stringProp>
+            <stringProp name="Argument.value">30000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">pro Lastagent</stringProp>
           </elementProp>
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
           <collectionProp name="Arguments.arguments">
             <elementProp name="influxdbMetricsSender" elementType="Argument">
@@ -176,7 +176,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${threads}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${ramp_up_time}</stringProp>
         <stringProp name="ThreadGroup.duration">${duration}</stringProp>
@@ -190,7 +190,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="counter">
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="counter" enabled="true">
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end">500</stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
@@ -199,11 +199,11 @@
           <boolProp name="CounterConfig.per_user">false</boolProp>
         </CounterConfig>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="index">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="index" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/vendor/httpVueLoader.js">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/vendor/httpVueLoader.js" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -227,7 +227,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/index.html">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/index.html" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -299,7 +299,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/css/eigene.css">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/css/eigene.css" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -371,7 +371,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/img/favicon.png">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/img/favicon.png" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -439,7 +439,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_441/ergebnis_ebene_-5541_id_8921_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_441/ergebnis_ebene_-5541_id_8921_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -459,7 +459,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_442/ergebnis_ebene_-5546_id_8963_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_442/ergebnis_ebene_-5546_id_8963_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -479,7 +479,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_443/ergebnis_ebene_-5543_id_8962_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_443/ergebnis_ebene_-5543_id_8962_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -499,7 +499,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_444/ergebnis_ebene_-5547_id_8964_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_444/ergebnis_ebene_-5547_id_8964_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -519,7 +519,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_445/ergebnis_ebene_-5549_id_8965_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_445/ergebnis_ebene_-5549_id_8965_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -559,7 +559,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_447/ergebnis_ebene_-5551_id_8967_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_447/ergebnis_ebene_-5551_id_8967_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -599,7 +599,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_449/ergebnis_ebene_-5553_id_8969_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_449/ergebnis_ebene_-5553_id_8969_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -619,7 +619,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_1423/ergebnis_ebene_-6790_id_11177_0.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/wahl_1423/ergebnis_ebene_-6790_id_11177_0.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -639,7 +639,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/komponenten/menu_wahltermin.vue">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/komponenten/menu_wahltermin.vue" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -651,7 +651,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/komponenten/eigener_text.vue">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/komponenten/eigener_text.vue" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -663,7 +663,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/komponenten/footer.vue">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/komponenten/footer.vue" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -675,7 +675,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/newsbox.json">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/api/newsbox.json" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -687,7 +687,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/img/logo.gif">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="daten/img/logo.gif" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -699,7 +699,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/vendor/bootstrap/fonts/bootstrap-icons.woff2">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="praesentation/vendor/bootstrap/fonts/bootstrap-icons.woff2" enabled="true">
             <stringProp name="HTTPSampler.domain">wahlergebnisse.komm.one</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -720,7 +720,7 @@
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="uebersicht">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="uebersicht" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
